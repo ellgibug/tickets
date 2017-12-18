@@ -32,6 +32,9 @@
         </tbody>
     </table>
 
+
+    {{--данные в графике можно вывести по-другому--}}
+
     <canvas id="myChart" width="400" height="200"></canvas>
     <script>
         $(document).ready(function () {

@@ -11,7 +11,7 @@
             </div>
         @endif
 
-        <h1>Конфренция</h1>
+        <h1>Конференция</h1>
         <table class="table table-sm">
             <thead>
             <tr>
@@ -19,7 +19,6 @@
                 <th>Название</th>
                 <th>Место</th>
                 <th>Время</th>
-                <th>Спикеры</th>
                 <th>Действия</th>
             </tr>
             </thead>
@@ -30,7 +29,6 @@
                     <td><a href="{{ route('conferences.show', $conference->id) }}">{{ $conference->title }}</a></td>
                     <td>{{ $conference->place }}</td>
                     <td>{{ $conference->time }}</td>
-                    <td>Спикеры</td>
                     <td>
                         <a href="{{route('conferences.edit', $conference->id)}}">Изменить</a>
                     </td>

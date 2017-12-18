@@ -26,6 +26,10 @@ class AdminController extends Controller
      */
     public function index()
     {
+        /*
+         * надо через ORM. Если таблица ticket_user пустая, то выдает ошибку
+         */
+
         $tickets = DB::table('ticket_user')
             ->select(DB::raw('count(*) as ticket_amount, ticket_id, tickets.price, conferences.title'))
             ->join('tickets', 'ticket_user.ticket_id', '=', 'tickets.id')

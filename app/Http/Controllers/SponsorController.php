@@ -41,6 +41,12 @@ class SponsorController extends Controller
             'donation' => 'required|numeric',
             'card' => 'required'
         ]);
+
+        $sponsor = new Sponsor();
+        $sponsor->organization = $request->organization;
+        $sponsor->donation = $request->donation;
+        $sponsor->card = $request->card;
+        $sponsor->save();
         return redirect('/#sponsors')->with('message', 'Благодарим за пожертвоание!');
     }
 
